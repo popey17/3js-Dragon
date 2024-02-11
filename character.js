@@ -29,7 +29,7 @@ controls.autoRotateSpeed = 2;
 controls.update();
 
 //3d object
-const loader = new GLTFLoader().setPath('/models/Serpent/');
+const loader = new GLTFLoader().setPath('models/Serpent/');
 loader.load('scene.gltf', (gltf)=> {
   scene.add(gltf.scene);
   gltf.scene.traverse((child) => {
@@ -52,7 +52,7 @@ const planeGermetry = new THREE.PlaneGeometry( 30, 30);
 planeGermetry.rotateX(-Math.PI / 2);
 
 
-const seaTexture = new THREE.TextureLoader().load('/models/darkSea.jpg');
+const seaTexture = new THREE.TextureLoader().load('models/darkSea.jpg');
 const planeMaterial = new THREE.MeshStandardMaterial({
   // map: seaTexture,
   color: 0x000000,
