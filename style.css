@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 3em;
+  
+}
