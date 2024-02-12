@@ -3,6 +3,7 @@ import { OrbitControls } from 'jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'jsm/loaders/GLTFLoader.js';
 import { Water } from 'jsm/objects/Water.js';
 import { Sky } from 'jsm/objects/Sky.js';
+let baseUrl = location.href.substring(0, location.href.lastIndexOf('/') + 1);
 
 
 const renderer = new THREE.WebGLRenderer({antialias: true});
@@ -58,7 +59,7 @@ const water = new Water(
   {
     textureWidth: 512,
     textureHeight: 512,
-    waterNormals: new THREE.TextureLoader().load( 'models/water.jpg', function ( texture ) {
+    waterNormals: new THREE.TextureLoader().load( baseUrl + 'models/water.jpg', function ( texture ) {
 
       texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 
